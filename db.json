@@ -1,0 +1,964 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "fullName": "Quản trị viên",
+      "email": "admin@stylehub.vn",
+      "phone": "0901000001",
+      "address": "Hà Nội",
+      "role": "admin",
+      "status": "active",
+      "createdAt": "2026-01-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "username": "lan.nguyen",
+      "password": "123456",
+      "fullName": "Nguyễn Thị Lan",
+      "email": "lan.nguyen@gmail.com",
+      "phone": "0912345678",
+      "address": "12 Trần Duy Hưng, Cầu Giấy, Hà Nội",
+      "role": "customer",
+      "status": "active",
+      "createdAt": "2026-03-12T10:20:00.000Z"
+    },
+    {
+      "id": 3,
+      "username": "minh.tran",
+      "password": "123456",
+      "fullName": "Trần Đức Minh",
+      "email": "minh.tran@gmail.com",
+      "phone": "0987654321",
+      "address": "45 Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+      "role": "customer",
+      "status": "active",
+      "createdAt": "2026-05-02T14:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "username": "spam.user",
+      "password": "123456",
+      "fullName": "Tài khoản vi phạm",
+      "email": "spam@example.com",
+      "phone": "0900000000",
+      "address": "",
+      "role": "customer",
+      "status": "blocked",
+      "createdAt": "2026-06-20T09:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Áo thun",
+      "description": "Áo thun basic, oversize, polo cho mọi phong cách"
+    },
+    {
+      "id": 2,
+      "name": "Áo sơ mi",
+      "description": "Sơ mi công sở và dạo phố"
+    },
+    {
+      "id": 3,
+      "name": "Áo khoác",
+      "description": "Khoác jean, da, hoodie giữ ấm"
+    },
+    {
+      "id": 4,
+      "name": "Quần",
+      "description": "Quần jean, kaki, quần âu"
+    },
+    {
+      "id": 5,
+      "name": "Váy & Đầm",
+      "description": "Đầm dự tiệc, váy công sở, váy dạo phố"
+    },
+    {
+      "id": 6,
+      "name": "Giày",
+      "description": "Sneaker, giày da, giày thể thao"
+    },
+    {
+      "id": 7,
+      "name": "Phụ kiện",
+      "description": "Túi xách, balo, đồng hồ, kính, mũ"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Áo thun Cotton Basic Trắng",
+      "categoryId": 1,
+      "gender": "Unisex",
+      "price": 199000,
+      "discount": 0,
+      "stock": 120,
+      "sold": 86,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Trắng",
+        "Đen",
+        "Xám"
+      ],
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Áo thun 100% cotton 2 chiều, định lượng 220gsm dày dặn, thấm hút mồ hôi tốt. Form regular dễ phối với quần jean, kaki hay short.",
+      "createdAt": "2026-02-11T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Áo thun Oversize Graphic",
+      "categoryId": 1,
+      "gender": "Unisex",
+      "price": 289000,
+      "discount": 15,
+      "stock": 64,
+      "sold": 41,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Đen",
+        "Trắng"
+      ],
+      "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Áo thun form rộng in hình graphic phong cách streetwear. Chất liệu cotton compact mềm mịn, hình in lụa bền màu sau nhiều lần giặt.",
+      "createdAt": "2026-03-12T09:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Áo thun In hình Original",
+      "categoryId": 1,
+      "gender": "Unisex",
+      "price": 229000,
+      "discount": 0,
+      "stock": 4,
+      "sold": 57,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Trắng"
+      ],
+      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Áo thun trắng in hình phong cách retro, cotton 100% mềm mát, hình in bền màu sau nhiều lần giặt.",
+      "createdAt": "2026-04-13T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Áo thun Đen Logo Mini",
+      "categoryId": 1,
+      "gender": "Unisex",
+      "price": 259000,
+      "discount": 20,
+      "stock": 38,
+      "sold": 22,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Đen"
+      ],
+      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Áo thun đen in logo nhỏ trước ngực, form regular tối giản, dễ phối với mọi kiểu quần.",
+      "createdAt": "2026-05-14T09:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Sơ mi Denim Wash",
+      "categoryId": 2,
+      "gender": "Nam",
+      "price": 459000,
+      "discount": 0,
+      "stock": 45,
+      "sold": 63,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Xanh nhạt",
+        "Xanh đậm"
+      ],
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Sơ mi denim wash nhẹ, vải jean mỏng mềm, có thể mặc như áo khoác ngoài hoặc cài cúc lịch sự.",
+      "createdAt": "2026-06-15T09:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Sơ mi Oxford Basic",
+      "categoryId": 2,
+      "gender": "Nam",
+      "price": 529000,
+      "discount": 10,
+      "stock": 27,
+      "sold": 19,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Trắng",
+        "Xanh navy",
+        "Đỏ"
+      ],
+      "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Sơ mi Oxford dệt sợi cotton, cổ button-down, phù hợp đi làm và đi học. Ít nhăn, dễ ủi.",
+      "createdAt": "2026-07-16T09:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Sơ mi Trắng Tay dài",
+      "categoryId": 2,
+      "gender": "Unisex",
+      "price": 489000,
+      "discount": 0,
+      "stock": 30,
+      "sold": 28,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Trắng"
+      ],
+      "image": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Sơ mi trắng tay dài chất cotton lụa, form suông thoải mái, item cơ bản không thể thiếu.",
+      "createdAt": "2026-08-17T09:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "name": "Áo khoác Da Biker",
+      "categoryId": 3,
+      "gender": "Nam",
+      "price": 1590000,
+      "discount": 25,
+      "stock": 12,
+      "sold": 15,
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Đen"
+      ],
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Áo khoác da PU cao cấp kiểu biker, lót trong lớp dù mềm, khóa kéo kim loại chắc chắn. Phong cách cá tính, mạnh mẽ.",
+      "createdAt": "2026-09-18T09:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "name": "Áo khoác Bomber Da lộn",
+      "categoryId": 3,
+      "gender": "Unisex",
+      "price": 790000,
+      "discount": 0,
+      "stock": 22,
+      "sold": 34,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Nâu"
+      ],
+      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Áo khoác bomber da lộn màu nâu bò, bo gấu và tay co giãn, lót trong mềm mại, ấm áp ngày se lạnh.",
+      "createdAt": "2026-01-19T09:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "name": "Hoodie Nỉ Bông Basic",
+      "categoryId": 3,
+      "gender": "Unisex",
+      "price": 459000,
+      "discount": 10,
+      "stock": 3,
+      "sold": 72,
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Xám",
+        "Đen",
+        "Be"
+      ],
+      "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Hoodie nỉ bông dày dặn, mũ hai lớp có dây rút, túi kangaroo phía trước. Giữ ấm tốt mà vẫn thoáng.",
+      "createdAt": "2026-02-20T09:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "name": "Quần Jean Slim-fit",
+      "categoryId": 4,
+      "gender": "Nam",
+      "price": 549000,
+      "discount": 0,
+      "stock": 50,
+      "sold": 95,
+      "sizes": [
+        "29",
+        "30",
+        "31",
+        "32",
+        "33"
+      ],
+      "colors": [
+        "Xanh đậm",
+        "Đen"
+      ],
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Quần jean nam dáng slim-fit ôm vừa phải, vải denim co giãn 4 chiều thoải mái vận động.",
+      "createdAt": "2026-03-21T09:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "name": "Quần Jean Rách gối",
+      "categoryId": 4,
+      "gender": "Unisex",
+      "price": 589000,
+      "discount": 15,
+      "stock": 33,
+      "sold": 40,
+      "sizes": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
+      "colors": [
+        "Xanh đậm"
+      ],
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Quần jean rách gối phong cách bụi bặm, vải denim co giãn nhẹ, dáng slim tôn chân.",
+      "createdAt": "2026-04-22T09:00:00.000Z"
+    },
+    {
+      "id": 13,
+      "name": "Quần Kaki Chinos",
+      "categoryId": 4,
+      "gender": "Nam",
+      "price": 499000,
+      "discount": 0,
+      "stock": 41,
+      "sold": 37,
+      "sizes": [
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "colors": [
+        "Be",
+        "Xanh rêu",
+        "Đen"
+      ],
+      "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Quần kaki chinos dáng ôm nhẹ, chất kaki cotton mềm, phù hợp cả đi làm lẫn đi chơi.",
+      "createdAt": "2026-05-23T09:00:00.000Z"
+    },
+    {
+      "id": 14,
+      "name": "Quần Jean Ống đứng",
+      "categoryId": 4,
+      "gender": "Unisex",
+      "price": 469000,
+      "discount": 0,
+      "stock": 26,
+      "sold": 18,
+      "sizes": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
+      "colors": [
+        "Xanh đậm"
+      ],
+      "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Quần jean ống đứng màu xanh đậm cổ điển, chất denim dày dặn, giữ form tốt.",
+      "createdAt": "2026-06-24T09:00:00.000Z"
+    },
+    {
+      "id": 15,
+      "name": "Đầm Maxi Dạ hội Đỏ",
+      "categoryId": 5,
+      "gender": "Nữ",
+      "price": 650000,
+      "discount": 20,
+      "stock": 18,
+      "sold": 29,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "Đỏ"
+      ],
+      "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Đầm maxi đỏ dáng xòe bay bổng, chất voan lụa hai lớp, nổi bật trong các buổi tiệc và sự kiện.",
+      "createdAt": "2026-07-25T09:00:00.000Z"
+    },
+    {
+      "id": 16,
+      "name": "Đầm Họa tiết Thắt eo",
+      "categoryId": 5,
+      "gender": "Nữ",
+      "price": 590000,
+      "discount": 0,
+      "stock": 21,
+      "sold": 24,
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Đỏ"
+      ],
+      "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Đầm họa tiết dáng chữ A kèm thắt lưng tôn eo, chất liệu thoáng mát, phù hợp đi chơi và dạo phố.",
+      "createdAt": "2026-08-26T09:00:00.000Z"
+    },
+    {
+      "id": 17,
+      "name": "Đầm Trễ vai Trắng",
+      "categoryId": 5,
+      "gender": "Nữ",
+      "price": 720000,
+      "discount": 10,
+      "stock": 15,
+      "sold": 13,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "Trắng"
+      ],
+      "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Đầm trễ vai trắng nữ tính, chân váy xòe nhẹ, chất đũi mềm mát cho những chuyến du lịch.",
+      "createdAt": "2026-09-27T09:00:00.000Z"
+    },
+    {
+      "id": 18,
+      "name": "Áo thun Xanh Pastel",
+      "categoryId": 1,
+      "gender": "Nữ",
+      "price": 390000,
+      "discount": 0,
+      "stock": 2,
+      "sold": 31,
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "Xanh nhạt"
+      ],
+      "image": "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Áo thun nữ màu xanh pastel nhẹ nhàng, cotton mềm, form vừa vặn trẻ trung.",
+      "createdAt": "2026-01-10T09:00:00.000Z"
+    },
+    {
+      "id": 19,
+      "name": "Sneaker Da lộn Nâu",
+      "categoryId": 6,
+      "gender": "Unisex",
+      "price": 890000,
+      "discount": 0,
+      "stock": 35,
+      "sold": 88,
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "colors": [
+        "Nâu"
+      ],
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Sneaker da lộn tông nâu bò, đế cao su êm ái, dễ phối với jean hoặc kaki.",
+      "createdAt": "2026-02-11T09:00:00.000Z"
+    },
+    {
+      "id": 20,
+      "name": "Giày Chạy bộ Air Red",
+      "categoryId": 6,
+      "gender": "Nam",
+      "price": 1290000,
+      "discount": 15,
+      "stock": 20,
+      "sold": 46,
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "colors": [
+        "Đỏ"
+      ],
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Giày chạy bộ đệm khí êm, upper lưới thoáng khí, đế chống trượt. Thích hợp tập luyện và đi bộ.",
+      "createdAt": "2026-03-12T09:00:00.000Z"
+    },
+    {
+      "id": 21,
+      "name": "Giày Thể thao Xám",
+      "categoryId": 6,
+      "gender": "Unisex",
+      "price": 650000,
+      "discount": 0,
+      "stock": 28,
+      "sold": 39,
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "colors": [
+        "Xám"
+      ],
+      "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Giày thể thao màu xám năng động, upper lưới thoáng khí, đế đệm êm cho cả ngày dài.",
+      "createdAt": "2026-04-13T09:00:00.000Z"
+    },
+    {
+      "id": 22,
+      "name": "Túi Đeo chéo Chần bông",
+      "categoryId": 7,
+      "gender": "Nữ",
+      "price": 990000,
+      "discount": 20,
+      "stock": 14,
+      "sold": 21,
+      "sizes": [
+        "Free size"
+      ],
+      "colors": [
+        "Đen"
+      ],
+      "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Túi đeo chéo da chần bông màu đen sang trọng, khóa kéo kim loại, dây đeo có thể điều chỉnh.",
+      "createdAt": "2026-05-14T09:00:00.000Z"
+    },
+    {
+      "id": 23,
+      "name": "Túi Xách Tay Đỏ",
+      "categoryId": 7,
+      "gender": "Nữ",
+      "price": 590000,
+      "discount": 0,
+      "stock": 25,
+      "sold": 17,
+      "sizes": [
+        "Free size"
+      ],
+      "colors": [
+        "Đỏ"
+      ],
+      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=750&fit=crop",
+      "isNew": true,
+      "description": "Túi xách tay dáng hộp màu đỏ nổi bật, khóa kim loại thanh lịch, kèm dây đeo vai.",
+      "createdAt": "2026-06-15T09:00:00.000Z"
+    },
+    {
+      "id": 24,
+      "name": "Balo Laptop Basic",
+      "categoryId": 7,
+      "gender": "Unisex",
+      "price": 690000,
+      "discount": 0,
+      "stock": 19,
+      "sold": 26,
+      "sizes": [
+        "Free size"
+      ],
+      "colors": [
+        "Xanh navy",
+        "Đen"
+      ],
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Balo vải chống thấm nhẹ, ngăn chống sốc đựng vừa laptop 15 inch, phù hợp đi học và đi làm.",
+      "createdAt": "2026-07-16T09:00:00.000Z"
+    },
+    {
+      "id": 25,
+      "name": "Đồng hồ Kim Dây da",
+      "categoryId": 7,
+      "gender": "Nam",
+      "price": 1490000,
+      "discount": 10,
+      "stock": 9,
+      "sold": 12,
+      "sizes": [
+        "Free size"
+      ],
+      "colors": [
+        "Nâu",
+        "Đen"
+      ],
+      "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Đồng hồ kim mặt tròn tối giản, dây da thật, chống nước 3ATM. Món phụ kiện hoàn thiện vẻ lịch lãm.",
+      "createdAt": "2026-08-17T09:00:00.000Z"
+    },
+    {
+      "id": 26,
+      "name": "Kính Mát Thời trang",
+      "categoryId": 7,
+      "gender": "Unisex",
+      "price": 350000,
+      "discount": 0,
+      "stock": 40,
+      "sold": 33,
+      "sizes": [
+        "Free size"
+      ],
+      "colors": [
+        "Đen",
+        "Nâu"
+      ],
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Kính mát gọng nhựa cao cấp, tròng chống tia UV400, kiểu dáng thời thượng.",
+      "createdAt": "2026-09-18T09:00:00.000Z"
+    },
+    {
+      "id": 27,
+      "name": "Mũ Lưỡi trai Basic",
+      "categoryId": 7,
+      "gender": "Unisex",
+      "price": 189000,
+      "discount": 0,
+      "stock": 60,
+      "sold": 48,
+      "sizes": [
+        "Free size"
+      ],
+      "colors": [
+        "Trắng",
+        "Be"
+      ],
+      "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=750&fit=crop",
+      "isNew": false,
+      "description": "Mũ lưỡi trai vải kaki, khóa điều chỉnh phía sau, phù hợp đi chơi và dã ngoại.",
+      "createdAt": "2026-01-19T09:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "receiver": {
+        "fullName": "Nguyễn Thị Lan",
+        "phone": "0912345678",
+        "email": "lan.nguyen@gmail.com",
+        "address": "12 Trần Duy Hưng, Cầu Giấy, Hà Nội",
+        "note": ""
+      },
+      "items": [
+        {
+          "productId": 15,
+          "name": "Đầm Maxi Dạ hội Đỏ",
+          "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=750&fit=crop",
+          "size": "M",
+          "color": "Đỏ",
+          "price": 520000,
+          "quantity": 1
+        },
+        {
+          "productId": 23,
+          "name": "Túi Xách Tay Đỏ",
+          "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=750&fit=crop",
+          "size": "Free size",
+          "color": "Đỏ",
+          "price": 590000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1110000,
+      "shippingFee": 0,
+      "couponCode": null,
+      "discountAmount": 0,
+      "total": 1110000,
+      "paymentMethod": "bank",
+      "status": "delivered",
+      "createdAt": "2026-08-03T10:15:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "receiver": {
+        "fullName": "Trần Đức Minh",
+        "phone": "0987654321",
+        "email": "minh.tran@gmail.com",
+        "address": "45 Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+        "note": ""
+      },
+      "items": [
+        {
+          "productId": 11,
+          "name": "Quần Jean Slim-fit",
+          "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=750&fit=crop",
+          "size": "31",
+          "color": "Xanh đậm",
+          "price": 549000,
+          "quantity": 2
+        },
+        {
+          "productId": 1,
+          "name": "Áo thun Cotton Basic Trắng",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=750&fit=crop",
+          "size": "L",
+          "color": "Trắng",
+          "price": 199000,
+          "quantity": 3
+        }
+      ],
+      "subtotal": 1695000,
+      "shippingFee": 0,
+      "couponCode": "SALE10",
+      "discountAmount": 169500,
+      "total": 1525500,
+      "paymentMethod": "cod",
+      "status": "delivered",
+      "createdAt": "2026-08-21T19:40:00.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "receiver": {
+        "fullName": "Nguyễn Thị Lan",
+        "phone": "0912345678",
+        "email": "lan.nguyen@gmail.com",
+        "address": "12 Trần Duy Hưng, Cầu Giấy, Hà Nội",
+        "note": "Giao giờ hành chính"
+      },
+      "items": [
+        {
+          "productId": 10,
+          "name": "Hoodie Nỉ Bông Basic",
+          "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=750&fit=crop",
+          "size": "M",
+          "color": "Be",
+          "price": 413000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 413000,
+      "shippingFee": 30000,
+      "couponCode": null,
+      "discountAmount": 0,
+      "total": 443000,
+      "paymentMethod": "cod",
+      "status": "shipping",
+      "createdAt": "2026-09-28T08:05:00.000Z"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "receiver": {
+        "fullName": "Trần Đức Minh",
+        "phone": "0987654321",
+        "email": "minh.tran@gmail.com",
+        "address": "45 Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+        "note": ""
+      },
+      "items": [
+        {
+          "productId": 20,
+          "name": "Giày Chạy bộ Air Red",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=750&fit=crop",
+          "size": "42",
+          "color": "Đỏ",
+          "price": 1097000,
+          "quantity": 1
+        },
+        {
+          "productId": 27,
+          "name": "Mũ Lưỡi trai Basic",
+          "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=750&fit=crop",
+          "size": "Free size",
+          "color": "Trắng",
+          "price": 189000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1286000,
+      "shippingFee": 0,
+      "couponCode": null,
+      "discountAmount": 0,
+      "total": 1286000,
+      "paymentMethod": "bank",
+      "status": "confirmed",
+      "createdAt": "2026-10-06T21:30:00.000Z"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "receiver": {
+        "fullName": "Nguyễn Thị Lan",
+        "phone": "0912345678",
+        "email": "lan.nguyen@gmail.com",
+        "address": "12 Trần Duy Hưng, Cầu Giấy, Hà Nội",
+        "note": ""
+      },
+      "items": [
+        {
+          "productId": 2,
+          "name": "Áo thun Oversize Graphic",
+          "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=750&fit=crop",
+          "size": "L",
+          "color": "Đen",
+          "price": 246000,
+          "quantity": 2
+        }
+      ],
+      "subtotal": 492000,
+      "shippingFee": 30000,
+      "couponCode": null,
+      "discountAmount": 0,
+      "total": 522000,
+      "paymentMethod": "cod",
+      "status": "pending",
+      "createdAt": "2026-10-09T15:12:00.000Z"
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "receiver": {
+        "fullName": "Trần Đức Minh",
+        "phone": "0987654321",
+        "email": "minh.tran@gmail.com",
+        "address": "45 Lê Lợi, Quận 1, TP. Hồ Chí Minh",
+        "note": ""
+      },
+      "items": [
+        {
+          "productId": 8,
+          "name": "Áo khoác Da Biker",
+          "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=750&fit=crop",
+          "size": "L",
+          "color": "Đen",
+          "price": 1193000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 1193000,
+      "shippingFee": 0,
+      "couponCode": null,
+      "discountAmount": 0,
+      "total": 1193000,
+      "paymentMethod": "cod",
+      "status": "cancelled",
+      "createdAt": "2026-09-10T11:00:00.000Z"
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "code": "SALE10",
+      "type": "percent",
+      "value": 10,
+      "maxDiscount": 200000,
+      "minOrder": 500000,
+      "description": "Giảm 10% (tối đa 200.000đ) cho đơn từ 500.000đ",
+      "active": true
+    },
+    {
+      "id": 2,
+      "code": "WELCOME50",
+      "type": "fixed",
+      "value": 50000,
+      "maxDiscount": 50000,
+      "minOrder": 300000,
+      "description": "Giảm 50.000đ cho đơn từ 300.000đ",
+      "active": true
+    },
+    {
+      "id": 3,
+      "code": "FREESHIP",
+      "type": "freeship",
+      "value": 0,
+      "maxDiscount": 0,
+      "minOrder": 0,
+      "description": "Miễn phí vận chuyển mọi đơn hàng",
+      "active": true
+    },
+    {
+      "id": 4,
+      "code": "SUMMER2025",
+      "type": "percent",
+      "value": 30,
+      "maxDiscount": 300000,
+      "minOrder": 0,
+      "description": "Mã đã hết hạn",
+      "active": false
+    }
+  ]
+}
