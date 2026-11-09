@@ -1,3 +1,11 @@
+/**
+ * context/WishlistContext.jsx — Danh sách sản phẩm yêu thích, lưu id sản phẩm vào localStorage (key "stylehub_wishlist").
+ * Hàm cung cấp qua useWishlist():
+ *   - ids, count       : danh sách id và số lượng sản phẩm yêu thích (hiện badge trên Header).
+ *   - has(id)          : sản phẩm đã được thả tim chưa.
+ *   - toggle(id)       : thả tim / bỏ tim.
+ *   - remove(id)       : bỏ một sản phẩm khỏi danh sách.
+ */
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 const WishlistContext = createContext(null);

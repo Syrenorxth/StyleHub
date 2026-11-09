@@ -1,3 +1,14 @@
+/**
+ * index.js — Điểm khởi chạy của ứng dụng React.
+ * Việc làm:
+ *   - Import CSS của Bootstrap, Bootstrap Icons và 2 file CSS tự viết (global.css, admin.css).
+ *   - Render <App /> vào thẻ #root, bọc bên ngoài bằng:
+ *       BrowserRouter     → bật điều hướng bằng React Router
+ *       ToastProvider     → hiển thị thông báo (toast) ở mọi trang
+ *       AuthProvider      → lưu thông tin người đăng nhập
+ *       WishlistProvider  → danh sách sản phẩm yêu thích
+ *       CartProvider      → giỏ hàng
+ */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';

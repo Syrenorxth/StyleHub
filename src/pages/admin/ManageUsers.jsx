@@ -1,3 +1,12 @@
+/**
+ * pages/admin/ManageUsers.jsx — Quản lý tài khoản khách hàng.
+ * Hàm:
+ *   - load()               : lấy danh sách user và đơn hàng.
+ *   - rows (useMemo)       : ghép mỗi tài khoản với số đơn và tổng chi tiêu (đơn đã giao);
+ *                            tìm theo họ tên / username / email / SĐT.
+ *   - handleToggleStatus() : khóa / mở khóa tài khoản (status active ↔ blocked) sau khi xác nhận.
+ *                            Tài khoản bị khóa sẽ không đăng nhập được.
+ */
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Badge, Button, Form, InputGroup, Table } from 'react-bootstrap';
 import { ConfirmModal, ErrorBox, Loading } from '../../components/common';

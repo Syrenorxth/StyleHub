@@ -1,3 +1,13 @@
+/**
+ * pages/Cart.jsx — Trang giỏ hàng.
+ *   - Liệt kê từng dòng (sản phẩm + size + màu), sửa số lượng, xóa dòng.
+ *   - Thanh tiến độ "còn bao nhiêu nữa để được miễn phí vận chuyển".
+ *   - Bảng tổng: tạm tính, phí ship (calcShippingFee), tổng cộng.
+ * Hàm:
+ *   - handleCheckout(): chưa đăng nhập → báo thông báo và sang /login (đăng nhập xong quay lại /checkout);
+ *                       đã đăng nhập → sang /checkout.
+ *   - Admin không có giỏ hàng: trang này chỉ hiện thông báo dẫn về trang quản trị.
+ */
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';

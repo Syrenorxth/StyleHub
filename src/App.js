@@ -1,3 +1,18 @@
+/**
+ * App.js — Khai báo toàn bộ đường dẫn (route) của ứng dụng.
+ * Cấu trúc:
+ *   - Nhóm dùng MainLayout (Header + Footer):
+ *       /                    → Home (trang chủ)
+ *       /shop                → Shop (danh sách, lọc, tìm kiếm sản phẩm)
+ *       /products/:id        → ProductDetail (chi tiết sản phẩm)
+ *       /cart, /wishlist     → Giỏ hàng, Yêu thích
+ *       /login, /register    → Đăng nhập, Đăng ký
+ *       /checkout, /order-success/:id, /my-orders → chỉ cho khách hàng (ProtectedRoute roles=['customer'])
+ *       /profile             → cần đăng nhập (mọi vai trò)
+ *   - Nhóm /admin/* dùng AdminLayout, chỉ cho admin (ProtectedRoute roles=['admin']):
+ *       /admin (Dashboard), /admin/products, /admin/categories, /admin/orders, /admin/users
+ *   - Đường dẫn không tồn tại (*) → NotFound (trang 404).
+ */
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 

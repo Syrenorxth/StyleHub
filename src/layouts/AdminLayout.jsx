@@ -1,3 +1,10 @@
+/**
+ * layouts/AdminLayout.jsx — Khung trang quản trị (/admin/*).
+ *   - MENU: danh sách mục trên sidebar (Tổng quan, Sản phẩm, Danh mục, Đơn hàng, Khách hàng).
+ *   - Sidebar dùng NavLink để tô sáng mục đang mở; trên mobile có nút mở/đóng sidebar.
+ *   - handleLogout(): đăng xuất và quay về trang chủ.
+ *   - Nội dung từng trang admin hiển thị qua <Outlet />.
+ */
 import React, { useState } from 'react';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';

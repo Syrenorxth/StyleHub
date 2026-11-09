@@ -1,3 +1,9 @@
+/**
+ * components/ProtectedRoute.jsx — Bảo vệ các route cần đăng nhập / đúng vai trò.
+ *   - Chưa đăng nhập → chuyển về /login, lưu lại trang muốn vào (state.from) để quay lại sau khi đăng nhập.
+ *   - Sai vai trò (roles) → admin về /admin, khách hàng về trang chủ.
+ *   - Hợp lệ → hiển thị children hoặc <Outlet /> (route con).
+ */
 import React from 'react';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';

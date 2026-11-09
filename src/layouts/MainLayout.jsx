@@ -1,3 +1,8 @@
+/**
+ * layouts/MainLayout.jsx — Khung chung cho các trang phía khách hàng.
+ *   - Hiển thị Header ở trên, nội dung trang con qua <Outlet />, Footer ở dưới.
+ *   - useEffect: tự cuộn lên đầu trang mỗi khi đổi đường dẫn.
+ */
 import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from '../components/Header';

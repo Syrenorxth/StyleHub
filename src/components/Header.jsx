@@ -1,3 +1,16 @@
+/**
+ * components/Header.jsx — Thanh điều hướng trên cùng (bố cục theo mẫu Figma MEJIWOO).
+ *   - Thanh thông báo miễn phí vận chuyển.
+ *   - Trái: menu NAV_LINKS (Trang chủ, Sản phẩm, Nữ, Nam, SALE); hàm match() xác định link đang active
+ *     dựa vào pathname + query (?gender=, ?sale=).
+ *   - Giữa: logo STYLEHUB.
+ *   - Phải: ô tìm kiếm, icon Yêu thích / Giỏ hàng (có badge số lượng), menu tài khoản hoặc icon Đăng nhập.
+ * Hàm:
+ *   - SearchBox       : component ô tìm kiếm (dùng lại cho desktop và menu mobile).
+ *   - useEffect       : đồng bộ ô tìm kiếm với ?q= trên URL khi ở trang /shop.
+ *   - handleSearch(e) : chuyển sang /shop?q=từ-khóa.
+ *   - handleLogout()  : đăng xuất và về trang chủ.
+ */
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { Container, Dropdown, Nav, Navbar } from 'react-bootstrap';

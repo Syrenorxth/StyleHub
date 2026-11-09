@@ -1,3 +1,15 @@
+/**
+ * utils/helpers.js — Các hàm tiện ích thuần (không phụ thuộc React).
+ *   - formatCurrency(value)        : định dạng số thành tiền Việt (vd 199000 → "199.000 ₫").
+ *   - formatDate(iso, withTime)    : định dạng ngày giờ kiểu dd/mm/yyyy hh:mm.
+ *   - getSalePrice(product)        : tính giá sau giảm theo % discount, làm tròn đến nghìn đồng.
+ *   - formatOrderCode(id)          : tạo mã đơn hiển thị dạng SH00001.
+ *   - calcShippingFee(subtotal)    : phí ship = 0 nếu đạt ngưỡng miễn phí, ngược lại 30.000đ.
+ *   - applyCoupon(coupon, subtotal): kiểm tra mã giảm giá (còn hiệu lực, đủ giá trị tối thiểu) và trả về
+ *                                    { discount, freeShip }; ném lỗi nếu mã không hợp lệ.
+ *   - normalizeText(text)          : bỏ dấu tiếng Việt + chữ thường để tìm kiếm không phân biệt dấu.
+ *   - PHONE_REGEX, EMAIL_REGEX     : biểu thức kiểm tra số điện thoại (10 số, bắt đầu bằng 0) và email.
+ */
 import { FREE_SHIP_THRESHOLD, SHIPPING_FEE } from './constants';
 
 export const formatCurrency = (value) =>

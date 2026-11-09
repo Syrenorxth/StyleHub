@@ -1,3 +1,13 @@
+/**
+ * pages/admin/ManageCategories.jsx — Quản lý danh mục sản phẩm.
+ *   - Form thêm/sửa ở bên trái, bảng danh mục (kèm số sản phẩm nhờ _embed=products) ở bên phải.
+ * Hàm:
+ *   - load()         : lấy danh mục kèm sản phẩm.
+ *   - resetForm()    : xóa form, thoát chế độ sửa.
+ *   - handleSubmit(e): kiểm tra tên ≥ 2 ký tự và không trùng tên danh mục khác, rồi gọi categoryApi.update hoặc create.
+ *   - handleDelete() : xóa danh mục sau khi xác nhận. Nút xóa bị khóa nếu danh mục còn sản phẩm
+ *                      (vì json-server sẽ xóa dây chuyền luôn các sản phẩm con).
+ */
 import React, { useCallback, useEffect, useState } from 'react';
 import { Button, Col, Form, Row, Spinner, Table } from 'react-bootstrap';
 import { ConfirmModal, ErrorBox, Loading } from '../../components/common';

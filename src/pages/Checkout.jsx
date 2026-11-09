@@ -1,3 +1,17 @@
+/**
+ * pages/Checkout.jsx — Trang thanh toán (chỉ khách hàng đã đăng nhập).
+ *   - Form thông tin nhận hàng (điền sẵn từ tài khoản), chọn COD / chuyển khoản, nhập mã giảm giá.
+ * Hàm:
+ *   - validate(form)     : kiểm tra họ tên, SĐT (PHONE_REGEX), email nếu có nhập (EMAIL_REGEX),
+ *                          địa chỉ ≥ 10 ký tự; trả về object lỗi.
+ *   - handleChange(e)    : cập nhật form và xóa lỗi của ô đang sửa.
+ *   - handleApplyCoupon(): tìm mã trên server rồi áp dụng bằng applyCoupon (báo lỗi nếu mã sai/hết hạn/chưa đủ điều kiện).
+ *   - handleSubmit(e)    : 1) validate form
+ *                          2) lấy tồn kho mới nhất trên server, không đủ hàng thì báo lỗi
+ *                          3) tạo đơn hàng (orderApi.create) với trạng thái "pending"
+ *                          4) trừ tồn kho (adjustStock -1), xóa giỏ, chuyển sang /order-success/:id.
+ *   - Giỏ hàng trống → chuyển về /cart.
+ */
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Button, Col, Container, Form, InputGroup, Row, Spinner } from 'react-bootstrap';

@@ -1,3 +1,8 @@
+/**
+ * pages/OrderSuccess.jsx — Trang đặt hàng thành công /order-success/:id.
+ *   - useEffect: lấy đơn hàng theo id; hiển thị mã đơn (SHxxxxx), người nhận, tổng tiền, phương thức thanh toán.
+ *   - Nút xem đơn hàng của tôi / tiếp tục mua sắm. Không tìm thấy đơn → báo lỗi.
+ */
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Container } from 'react-bootstrap';

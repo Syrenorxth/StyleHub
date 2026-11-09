@@ -1,3 +1,12 @@
+/**
+ * pages/admin/Dashboard.jsx — Trang tổng quan của admin.
+ *   - StatCard: thẻ số liệu (icon, nhãn, giá trị, ghi chú).
+ *   - load(): lấy cùng lúc sản phẩm, đơn hàng, khách hàng.
+ * Các số liệu tính toán:
+ *   - Doanh thu = tổng tiền các đơn "Đã giao"; số đơn chờ xác nhận; số sản phẩm; số khách hàng.
+ *   - Đơn hàng gần đây, thống kê số đơn theo từng trạng thái (thanh tiến độ).
+ *   - Top 5 sản phẩm bán chạy, danh sách sản phẩm sắp hết hàng (tồn kho ≤ LOW_STOCK_LIMIT).
+ */
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, ProgressBar, Row, Table } from 'react-bootstrap';

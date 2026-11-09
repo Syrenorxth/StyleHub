@@ -1,3 +1,10 @@
+/**
+ * context/ToastContext.jsx — Hệ thống thông báo nhỏ (toast) góc màn hình.
+ *   - notify(message, variant): hiện thông báo; variant = success | danger | warning | info,
+ *                               tự ẩn sau vài giây. Dùng qua hook useToast().
+ *   - dismiss(id)             : đóng một thông báo.
+ *   - ICONS                   : icon tương ứng từng loại thông báo.
+ */
 import React, { createContext, useCallback, useContext, useState } from 'react';
 import { Toast, ToastContainer } from 'react-bootstrap';
 

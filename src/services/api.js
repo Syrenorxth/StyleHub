@@ -1,3 +1,18 @@
+/**
+ * services/api.js — Tầng gọi API tới json-server (http://localhost:9999) bằng axios.
+ * Mọi trang đều gọi dữ liệu qua file này, không gọi axios trực tiếp.
+ * Hàm / đối tượng:
+ *   - http                  : axios instance dùng chung (baseURL = API_URL).
+ *   - getErrorMessage(err)  : chuyển lỗi axios thành câu thông báo tiếng Việt dễ hiểu.
+ *   - productApi            : getAll(params), getById(id) (kèm _expand=category), create, update (PUT), patch, remove.
+ *   - categoryApi           : getAll(params), create, update, remove.
+ *   - orderApi              : getAll(params) (mặc định sắp xếp mới nhất trước), getById, create,
+ *                             updateStatus(id, status) (đổi trạng thái + cập nhật updatedAt).
+ *   - userApi               : getAll, getById, findByUsername, create, patch.
+ *   - couponApi.findByCode  : tìm mã giảm giá theo code (tự đổi sang chữ in hoa), không có trả về null.
+ *   - adjustStock(items, direction): cộng/trừ tồn kho và số lượng đã bán cho từng sản phẩm trong đơn.
+ *                             direction = -1 khi đặt hàng (trừ kho), +1 khi hủy đơn (hoàn kho).
+ */
 import axios from 'axios';
 import { API_URL } from '../utils/constants';
 

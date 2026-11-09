@@ -1,3 +1,16 @@
+/**
+ * pages/Home.jsx — Trang chủ (bố cục theo mẫu Figma MEJIWOO).
+ * Các khối: Banner (ảnh người mẫu 2 bên, thương hiệu ở giữa) → Bộ sưu tập Nữ/Nam/Sale → Hàng mới về
+ *   → Danh mục nổi bật (mosaic) → Đang giảm giá → Banner mã giảm giá → Bán chạy nhất → Khách hàng nói gì → Cam kết.
+ * Hàm / dữ liệu:
+ *   - unsplash(id, w, h)  : tạo link ảnh Unsplash theo kích thước.
+ *   - HERO_LEFT/RIGHT, COLLECTIONS, TESTIMONIALS, PERKS: dữ liệu tĩnh cho các khối.
+ *   - SectionTitle, ProductGrid: component con hiển thị tiêu đề khối và lưới sản phẩm.
+ *   - loadData()          : gọi API lấy sản phẩm (_expand=category) và danh mục (_embed=products) cùng lúc.
+ *   - newArrivals / onSale / bestSellers: lọc sản phẩm mới, đang giảm giá (giảm nhiều nhất), bán chạy nhất.
+ *   - featuredCategories  : 5 danh mục có nhiều sản phẩm nhất.
+ *   - findProduct(id)     : tìm sản phẩm để gắn ảnh vào phần đánh giá khách hàng.
+ */
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';

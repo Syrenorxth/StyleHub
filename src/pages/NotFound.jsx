@@ -1,3 +1,6 @@
+/**
+ * pages/NotFound.jsx — Trang 404 khi người dùng vào đường dẫn không tồn tại; có nút quay về trang chủ.
+ */
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { EmptyState } from '../components/common';

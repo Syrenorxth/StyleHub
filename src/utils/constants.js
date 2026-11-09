@@ -1,3 +1,12 @@
+/**
+ * utils/constants.js — Các hằng số cấu hình dùng chung, không chứa hàm xử lý.
+ *   - API_URL, SHIPPING_FEE (phí ship 30.000đ), FREE_SHIP_THRESHOLD (miễn ship từ 1.000.000đ), LOW_STOCK_LIMIT.
+ *   - SHOP_PAGE_SIZE / ADMIN_PAGE_SIZE: số sản phẩm mỗi trang khi phân trang.
+ *   - GENDERS, SIZE_OPTIONS, COLOR_SWATCHES (tên màu → mã màu), PRICE_RANGES, SORT_OPTIONS: dữ liệu cho bộ lọc/form.
+ *   - ORDER_STATUS : nhãn + màu của từng trạng thái đơn hàng.
+ *   - STATUS_FLOW  : trạng thái kế tiếp hợp lệ (pending → confirmed → shipping → delivered, hoặc → cancelled).
+ *   - PAYMENT_METHODS: COD / chuyển khoản.
+ */
 // ─── Cấu hình chung ──────────────────────────────────────────────────────────
 export const API_URL = 'http://localhost:9999';
 

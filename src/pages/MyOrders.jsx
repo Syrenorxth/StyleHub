@@ -1,3 +1,12 @@
+/**
+ * pages/MyOrders.jsx — Trang "Đơn hàng của tôi" (khách hàng).
+ *   - TABS: lọc đơn theo trạng thái (Tất cả, Chờ xác nhận, Đã xác nhận, Đang giao, Đã giao, Đã hủy).
+ * Hàm:
+ *   - loadOrders()   : lấy các đơn của user đang đăng nhập (mới nhất trước).
+ *   - countOf(key)   : đếm số đơn của mỗi tab.
+ *   - handleCancel() : hủy đơn — kiểm tra lại trên server đơn vẫn đang "pending" thì mới cho hủy,
+ *                      đổi trạng thái sang "cancelled" và hoàn lại tồn kho (adjustStock +1).
+ */
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';

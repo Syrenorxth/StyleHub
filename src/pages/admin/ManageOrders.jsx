@@ -1,3 +1,14 @@
+/**
+ * pages/admin/ManageOrders.jsx — Quản lý đơn hàng.
+ *   - Lọc theo trạng thái, tìm theo mã đơn / tên / SĐT người nhận, phân trang, modal xem chi tiết đơn.
+ * Hàm:
+ *   - load()                          : lấy toàn bộ đơn hàng.
+ *   - filtered                        : lọc + tìm kiếm đơn hàng.
+ *   - handleChangeStatus(order, next) : lấy lại trạng thái mới nhất trên server, chỉ cho chuyển theo STATUS_FLOW
+ *                                       (Chờ xác nhận → Đã xác nhận → Đang giao → Đã giao, hoặc Hủy);
+ *                                       nếu hủy đơn thì hoàn lại tồn kho (adjustStock +1).
+ *   - renderStatusActions(order)      : vẽ các nút chuyển trạng thái hợp lệ cho từng đơn.
+ */
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Button, Col, Form, InputGroup, Modal, Row, Table } from 'react-bootstrap';
 import { ErrorBox, Loading, Pager, StatusBadge } from '../../components/common';

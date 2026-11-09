@@ -1,3 +1,7 @@
+/**
+ * components/Footer.jsx — Chân trang: logo + giới thiệu, mạng xã hội, link mua sắm, link hỗ trợ, thông tin liên hệ.
+ * Chỉ hiển thị, không có hàm xử lý.
+ */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';

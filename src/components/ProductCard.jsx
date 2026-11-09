@@ -1,3 +1,11 @@
+/**
+ * components/ProductCard.jsx — Thẻ hiển thị 1 sản phẩm (dùng ở Trang chủ, Shop, Yêu thích, Sản phẩm liên quan).
+ *   - Ảnh sản phẩm (ảnh lỗi → FALLBACK_IMAGE), nhãn Mới / -x% / Hết hàng, nút thả tim.
+ *   - Tên, giá sau giảm + giá gốc gạch ngang, chấm màu và tên danh mục.
+ *   - Bấm vào thẻ → sang trang chi tiết /products/:id.
+ * Hàm:
+ *   - handleToggleWishlist(e): chặn điều hướng, thả/bỏ tim và hiện thông báo.
+ */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useWishlist } from '../context/WishlistContext';

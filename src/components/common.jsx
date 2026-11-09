@@ -1,3 +1,14 @@
+/**
+ * components/common.jsx — Các component nhỏ dùng lại ở nhiều trang.
+ *   - Loading       : vòng xoay + chữ "Đang tải...".
+ *   - ErrorBox      : hộp báo lỗi kèm nút "Thử lại" (onRetry).
+ *   - EmptyState    : giao diện khi danh sách rỗng (icon, tiêu đề, mô tả, nút hành động).
+ *   - PageBanner    : tiêu đề trang + breadcrumb (đường dẫn Trang chủ > ...).
+ *   - StatusBadge   : nhãn màu trạng thái đơn hàng (lấy từ ORDER_STATUS).
+ *   - QuantityInput : ô chọn số lượng có nút -/+ , giới hạn min/max (tồn kho).
+ *   - Pager         : phân trang.
+ *   - ConfirmModal  : hộp thoại xác nhận (xóa, hủy đơn, khóa tài khoản...).
+ */
 // Các component nhỏ dùng lại ở nhiều trang
 import React from 'react';
 import { Link } from 'react-router-dom';

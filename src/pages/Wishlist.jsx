@@ -1,3 +1,8 @@
+/**
+ * pages/Wishlist.jsx — Trang sản phẩm yêu thích.
+ *   - useEffect: lấy toàn bộ sản phẩm rồi lọc ra những sản phẩm có id nằm trong wishlist.
+ *   - Danh sách rỗng → hiển thị EmptyState gợi ý đi mua sắm.
+ */
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import ProductCard from '../components/ProductCard';

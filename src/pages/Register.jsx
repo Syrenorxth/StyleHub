@@ -1,3 +1,12 @@
+/**
+ * pages/Register.jsx — Trang đăng ký tài khoản khách hàng.
+ * Hàm:
+ *   - validate(f)     : kiểm tra họ tên (≥ 2 ký tự), username (4–20 ký tự: chữ, số, dấu chấm, gạch dưới), email, SĐT, mật khẩu (≥ 6 ký tự),
+ *                       nhập lại mật khẩu khớp, đồng ý điều khoản.
+ *   - handleChange(e) : cập nhật form (cả checkbox) và xóa lỗi ô đang sửa.
+ *   - handleSubmit(e) : validate rồi gọi register() (báo lỗi nếu trùng username); thành công thì tự đăng nhập.
+ *   - field(name, label, props): hàm tạo nhanh 1 ô nhập kèm thông báo lỗi.
+ */
 import React, { useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Col, Form, Row, Spinner } from 'react-bootstrap';

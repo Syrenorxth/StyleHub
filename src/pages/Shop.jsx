@@ -1,3 +1,16 @@
+/**
+ * pages/Shop.jsx — Trang cửa hàng: tìm kiếm, lọc, sắp xếp, phân trang sản phẩm.
+ * Mọi bộ lọc lưu trên URL (useSearchParams) nên có thể chia sẻ link / bấm Back:
+ *   ?q= (từ khóa) &category= &gender= &price= &sale=1 &sort= &page=
+ * Hàm:
+ *   - updateParam(key, value): đổi 1 tham số trên URL (giá trị mặc định thì xóa khỏi URL), về lại trang 1.
+ *   - loadData()             : lấy toàn bộ sản phẩm và danh mục.
+ *   - filtered (useMemo)     : lọc theo từ khóa (không phân biệt dấu), danh mục, giới tính (Unisex luôn hiện),
+ *                              khoảng giá (theo giá sau giảm), đang sale; rồi sắp xếp theo lựa chọn.
+ *   - totalPages / pageItems : chia trang theo SHOP_PAGE_SIZE.
+ *   - bannerTitle            : tiêu đề trang thay đổi theo bộ lọc đang chọn.
+ *   - Trên mobile có nút ẩn/hiện bộ lọc.
+ */
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Col, Container, Form, Row } from 'react-bootstrap';

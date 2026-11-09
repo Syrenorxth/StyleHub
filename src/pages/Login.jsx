@@ -1,3 +1,12 @@
+/**
+ * pages/Login.jsx — Trang đăng nhập.
+ *   - Đã đăng nhập → tự chuyển đi (admin vào /admin, khách về trang trước đó).
+ * Hàm:
+ *   - handleChange(e) : cập nhật username / password.
+ *   - handleSubmit(e) : kiểm tra không bỏ trống, gọi login(); thành công thì chuyển về trang đã lưu trong
+ *                       state.from (do ProtectedRoute truyền sang), admin thì vào /admin; lỗi thì hiện thông báo.
+ *   - Hiển thị sẵn các tài khoản demo để test.
+ */
 import React, { useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Form, InputGroup, Spinner } from 'react-bootstrap';

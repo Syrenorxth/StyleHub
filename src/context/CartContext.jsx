@@ -1,3 +1,15 @@
+/**
+ * context/CartContext.jsx — Giỏ hàng dùng useReducer + Context, lưu localStorage (key "stylehub_cart").
+ * Mỗi dòng giỏ hàng được phân biệt bởi: sản phẩm + size + màu (makeKey).
+ *   - cartReducer(state, action): xử lý các action
+ *         ADD             → thêm sản phẩm; nếu đã có cùng size/màu thì cộng dồn số lượng (không vượt tồn kho)
+ *         UPDATE_QUANTITY → đổi số lượng 1 dòng
+ *         REMOVE          → xóa 1 dòng
+ *         CLEAR           → xóa hết giỏ (sau khi đặt hàng)
+ *   - loadCart(): đọc giỏ hàng đã lưu khi mở lại trang.
+ * Hàm cung cấp qua useCart(): items, totalQuantity, subtotal (tạm tính theo giá sau giảm),
+ *   addItem(product, {size, color, quantity}), updateQuantity(key, qty), removeItem(key), clearCart().
+ */
 import React, { createContext, useContext, useEffect, useMemo, useReducer } from 'react';
 import { getSalePrice } from '../utils/helpers';
 

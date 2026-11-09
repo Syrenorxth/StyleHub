@@ -1,3 +1,18 @@
+/**
+ * pages/admin/ManageProducts.jsx — Quản lý sản phẩm (thêm / sửa / xóa).
+ *   - Bảng sản phẩm có tìm kiếm, lọc theo danh mục và tình trạng kho, phân trang.
+ * Hàm:
+ *   - validate(f)     : kiểm tra tên ≥ 3 ký tự, đã chọn danh mục, giá ≥ 1.000đ, giảm giá 0–90%,
+ *                       tồn kho là số nguyên ≥ 0, link ảnh http(s), ít nhất 1 size, ít nhất 1 màu, mô tả ≥ 10 ký tự.
+ *   - loadData()      : lấy sản phẩm (mới nhất trước) và danh mục.
+ *   - filtered        : lọc danh sách theo từ khóa (không dấu) / danh mục / kho (sắp hết, hết hàng); chia trang theo ADMIN_PAGE_SIZE.
+ *   - openCreate()    : mở modal thêm mới với form trống.
+ *   - openEdit(p)     : mở modal sửa, đổ dữ liệu sản phẩm vào form.
+ *   - handleChange(e) : cập nhật ô nhập trong form.
+ *   - toggleSize(size): chọn / bỏ chọn một size.
+ *   - handleSave(e)   : validate rồi gọi productApi.update (giữ nguyên sold, createdAt) hoặc productApi.create.
+ *   - handleDelete()  : xóa sản phẩm sau khi xác nhận ở ConfirmModal.
+ */
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Button, Col, Form, InputGroup, Modal, Row, Spinner, Table } from 'react-bootstrap';
 import { ConfirmModal, ErrorBox, Loading, Pager } from '../../components/common';

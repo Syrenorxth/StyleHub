@@ -1,3 +1,11 @@
+/**
+ * styles/global.css — Toàn bộ giao diện phía khách hàng.
+ *   - :root  : biến màu, font, bo góc (đổi màu cả web chỉ cần sửa ở đây).
+ *   - Các phần: Buttons, Header, Hero, Sections (bộ sưu tập, mosaic, đánh giá), Product card, Page banner,
+ *     Shop, Product detail, Quantity input, Cart / Checkout, Order success, My orders, Auth, Profile,
+ *     States (loading/lỗi/rỗng), Toast, Footer.
+ *   - Có các @media để hiển thị tốt trên điện thoại.
+ */
 /* ==========================================================================
    StyleHub — giao diện cửa hàng
    Phong cách tham khảo mẫu Figma "MEJIWOO Fashion – E-commerce Landing Page":

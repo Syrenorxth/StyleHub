@@ -1,3 +1,14 @@
+/**
+ * pages/ProductDetail.jsx — Trang chi tiết sản phẩm /products/:id.
+ *   - Ảnh, giá (giá giảm, tiết kiệm bao nhiêu), chọn màu, chọn size, chọn số lượng (giới hạn theo tồn kho
+ *     trừ đi số đã có trong giỏ), nút Thêm vào giỏ / Mua ngay / Yêu thích.
+ *   - Tab Mô tả / Bảo quản / Đổi trả; khối Sản phẩm liên quan (cùng danh mục).
+ * Hàm:
+ *   - loadProduct()     : lấy sản phẩm theo id (không có → báo không tìm thấy) và các sản phẩm cùng danh mục.
+ *   - available         : số lượng còn có thể thêm = tồn kho - số lượng đã có trong giỏ.
+ *   - handleAdd(buyNow) : bắt buộc chọn size + màu, kiểm tra còn hàng, thêm vào giỏ và báo thông báo;
+ *                         buyNow = true thì chuyển sang trang giỏ hàng.
+ */
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap';

@@ -1,3 +1,11 @@
+/**
+ * pages/Profile.jsx — Trang tài khoản cá nhân.
+ *   - Thẻ thông tin (avatar chữ cái đầu, vai trò) + 2 form.
+ * Hàm:
+ *   - onInfo / onPwd     : cập nhật giá trị 2 form khi gõ.
+ *   - handleInfoSubmit(e): kiểm tra họ tên, email, SĐT rồi gọi updateProfile.
+ *   - handlePwdSubmit(e) : kiểm tra mật khẩu mới (≥ 6 ký tự, khác mật khẩu cũ, nhập lại khớp) rồi gọi changePassword.
+ */
 import React, { useState } from 'react';
 import { Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import { PageBanner } from '../components/common';

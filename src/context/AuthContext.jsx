@@ -1,3 +1,15 @@
+/**
+ * context/AuthContext.jsx — Quản lý đăng nhập / tài khoản người dùng (Context API).
+ * Lưu phiên vào localStorage (key "stylehub_user"), KHÔNG lưu mật khẩu.
+ * Hàm cung cấp qua useAuth():
+ *   - user, isAdmin                 : người đang đăng nhập và cờ có phải admin không.
+ *   - login(username, password)     : tìm user trên server, sai thông tin → báo lỗi, tài khoản bị khóa (blocked) → chặn.
+ *   - register(form)                : kiểm tra trùng username rồi tạo tài khoản customer mới và tự đăng nhập.
+ *   - logout()                      : xóa phiên đăng nhập.
+ *   - updateProfile(changes)        : cập nhật họ tên / email / SĐT / địa chỉ.
+ *   - changePassword(current, new)  : kiểm tra mật khẩu hiện tại rồi đổi mật khẩu mới.
+ * Hàm nội bộ: readStoredUser() đọc phiên cũ khi tải trang, persist() lưu user (đã bỏ password).
+ */
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { userApi } from '../services/api';
 
