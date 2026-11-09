@@ -10,11 +10,28 @@ import { FREE_SHIP_THRESHOLD } from '../utils/constants';
 // match(): kiểm tra link có đang active không dựa trên pathname + query
 const NAV_LINKS = [
   { to: '/', label: 'Trang chủ', match: (path) => path === '/' },
-  { to: '/shop', label: 'Cửa hàng', match: (path, q) => path === '/shop' && !q.get('gender') && !q.get('sale') },
-  { to: '/shop?gender=Nam', label: 'Nam', match: (path, q) => path === '/shop' && q.get('gender') === 'Nam' },
+  { to: '/shop', label: 'Sản phẩm', match: (path, q) => path === '/shop' && !q.get('gender') && !q.get('sale') },
   { to: '/shop?gender=Nữ', label: 'Nữ', match: (path, q) => path === '/shop' && q.get('gender') === 'Nữ' },
-  { to: '/shop?sale=1', label: 'Sale', accent: true, match: (path, q) => path === '/shop' && q.get('sale') === '1' },
+  { to: '/shop?gender=Nam', label: 'Nam', match: (path, q) => path === '/shop' && q.get('gender') === 'Nam' },
+  { to: '/shop?sale=1', label: 'SALE', accent: true, match: (path, q) => path === '/shop' && q.get('sale') === '1' },
 ];
+
+function SearchBox({ keyword, setKeyword, onSubmit, className }) {
+  return (
+    <form className={`nav-search ${className}`} onSubmit={onSubmit} role="search">
+      <input
+        type="search"
+        placeholder="Tìm kiếm"
+        value={keyword}
+        onChange={(e) => setKeyword(e.target.value)}
+        aria-label="Tìm kiếm sản phẩm"
+      />
+      <button type="submit" aria-label="Tìm">
+        <i className="bi bi-search"></i>
+      </button>
+    </form>
+  );
+}
 
 function Header() {
   const { user, isAdmin, logout } = useAuth();
@@ -43,22 +60,29 @@ function Header() {
     navigate('/');
   };
 
-
   return (
     <header className="site-header">
       <div className="announcement-bar">
-        <i className="bi bi-truck me-2"></i>
-        Miễn phí vận chuyển cho đơn hàng từ {formatCurrency(FREE_SHIP_THRESHOLD)}
+        Miễn phí vận chuyển cho đơn từ {formatCurrency(FREE_SHIP_THRESHOLD)}
         <span className="d-none d-md-inline"> · Đổi trả trong 7 ngày</span>
       </div>
 
       <Navbar expand="lg" className="main-nav" expanded={expanded} onToggle={setExpanded}>
-        <Container>
+        <Container className="nav-shell">
+          {/* Cột giữa: logo */}
           <Navbar.Brand as={Link} to="/" className="brand-logo" onClick={() => setExpanded(false)}>
-            STYLE<span>HUB</span>
+            STYLEHUB
+            <small>thời trang mỗi ngày</small>
           </Navbar.Brand>
 
-          <div className="d-flex align-items-center gap-1 order-lg-3">
+          {/* Cột phải: tìm kiếm + icon */}
+          <div className="nav-right">
+            <SearchBox
+              keyword={keyword}
+              setKeyword={setKeyword}
+              onSubmit={handleSearch}
+              className="d-none d-lg-flex"
+            />
             <Link to="/wishlist" className="icon-btn" title="Yêu thích">
               <i className="bi bi-heart"></i>
               {wishCount > 0 && <span className="icon-badge">{wishCount}</span>}
@@ -99,16 +123,17 @@ function Header() {
                 </Dropdown.Menu>
               </Dropdown>
             ) : (
-              <Link to="/login" className="btn btn-sh btn-sm ms-1 d-none d-sm-inline-block">
-                Đăng nhập
+              <Link to="/login" className="icon-btn" title="Đăng nhập">
+                <i className="bi bi-person"></i>
               </Link>
             )}
 
-            <Navbar.Toggle aria-controls="main-menu" className="ms-1 border-0 shadow-none" />
+            <Navbar.Toggle aria-controls="main-menu" className="nav-toggle border-0 shadow-none" />
           </div>
 
-          <Navbar.Collapse id="main-menu" className="order-lg-2">
-            <Nav className="mx-lg-auto main-links">
+          {/* Cột trái: menu điều hướng */}
+          <Navbar.Collapse id="main-menu" className="nav-left">
+            <Nav className="main-links">
               {NAV_LINKS.map((link) => (
                 <Nav.Link
                   key={link.to}
@@ -120,22 +145,8 @@ function Header() {
                   {link.label}
                 </Nav.Link>
               ))}
-              {!user && (
-                <Nav.Link as={Link} to="/login" className="d-sm-none" onClick={() => setExpanded(false)}>
-                  Đăng nhập
-                </Nav.Link>
-              )}
             </Nav>
-            <form className="nav-search" onSubmit={handleSearch} role="search">
-              <i className="bi bi-search"></i>
-              <input
-                type="search"
-                placeholder="Tìm áo, quần, váy..."
-                value={keyword}
-                onChange={(e) => setKeyword(e.target.value)}
-                aria-label="Tìm kiếm sản phẩm"
-              />
-            </form>
+            <SearchBox keyword={keyword} setKeyword={setKeyword} onSubmit={handleSearch} className="d-lg-none" />
           </Navbar.Collapse>
         </Container>
       </Navbar>

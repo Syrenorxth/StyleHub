@@ -47,18 +47,18 @@ function ProductCard({ product }) {
       </div>
 
       <div className="product-info">
+        <h3 className="product-name">{product.name}</h3>
+        <div className="product-price">
+          <span className={product.discount > 0 ? 'price-sale' : ''}>{formatCurrency(salePrice)}</span>
+          {product.discount > 0 && <del>{formatCurrency(product.price)}</del>}
+        </div>
         <div className="product-meta">
-          <span>{product.category?.name || product.gender}</span>
           <span className="swatches">
             {product.colors.slice(0, 4).map((c) => (
               <span key={c} className="swatch-dot" style={{ background: COLOR_SWATCHES[c] || '#ccc' }} title={c} />
             ))}
           </span>
-        </div>
-        <h3 className="product-name">{product.name}</h3>
-        <div className="product-price">
-          <span className={product.discount > 0 ? 'price-sale' : ''}>{formatCurrency(salePrice)}</span>
-          {product.discount > 0 && <del>{formatCurrency(product.price)}</del>}
+          <span>{product.category?.name || product.gender}</span>
         </div>
       </div>
     </Link>

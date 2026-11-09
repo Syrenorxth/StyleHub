@@ -13,6 +13,8 @@
 
 Dữ liệu lưu trong `db.json` và được phục vụ bởi **json-server** ở cổng `9999`.
 
+Giao diện tham khảo mẫu Figma Community [MEJIWOO Fashion – E-commerce Website Landing Page](https://www.figma.com/community/file/1265206534273305705/mejiwoo-fashion-e-commerce-website-landing-page): header logo ở giữa, banner nền kem, khối bộ sưu tập, lưới sản phẩm trên nền kem, mosaic danh mục nổi bật và phần đánh giá của khách hàng.
+
 ---
 
 ## Chức năng

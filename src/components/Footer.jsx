@@ -8,8 +8,9 @@ function Footer() {
       <Container>
         <Row className="gy-4">
           <Col lg={4}>
-            <div className="brand-logo brand-logo-light mb-3">
-              STYLE<span>HUB</span>
+            <div className="brand-logo footer-logo mb-3">
+              STYLEHUB
+              <small>thời trang mỗi ngày</small>
             </div>
             <p className="footer-text">
               Thời trang tối giản, chất liệu bền đẹp và giá hợp lý cho người trẻ Việt. Mặc đẹp mỗi ngày, không
@@ -27,8 +28,8 @@ function Footer() {
             <h6 className="footer-title">Mua sắm</h6>
             <ul className="footer-links">
               <li><Link to="/shop">Tất cả sản phẩm</Link></li>
-              <li><Link to="/shop?gender=Nam">Thời trang Nam</Link></li>
               <li><Link to="/shop?gender=Nữ">Thời trang Nữ</Link></li>
+              <li><Link to="/shop?gender=Nam">Thời trang Nam</Link></li>
               <li><Link to="/shop?sale=1">Khuyến mãi</Link></li>
             </ul>
           </Col>
